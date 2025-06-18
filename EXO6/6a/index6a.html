@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice sur DOM</title>
+</head>
+<body>
+    <H1>Exercice 6a</H1>
+    <a href="/EXO6/6a/index6b.html">6b</a>
+
+    <input type="text" id="nom" placeholder="saisir">
+    <button id="soumet">Soumettre</button>
+    <p id="text"></p>
+
+    <script>
+        //6a Créez une zone de texte (<input>) et un bouton soumettre. Quand on clique sur 'Soumettre',
+        //  affichez dans un paragraph en dessous 'Votre nom est :  le texte à l'intérieur de la zone de texte) 
+
+let input = document.getElementById('nom')
+const btnsoumet = document.getElementById('soumet')
+const affich = document.getElementById('text')
+
+btnsoumet.addEventListener('click',() => {
+    const nom = input.value
+    affich.textContent = ('votre nom est :  '+ nom )
+})
+
+        
+    </script>
+    
+</body>
+</html>

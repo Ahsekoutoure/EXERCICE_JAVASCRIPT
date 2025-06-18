@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EXO5c</h1>
+    <button ID="btnpile">pile</button>
+    <button ID="btnface">face</button>
+    <p ID="result"></p>
+
+    <script>
+        //5c. Créez 2 boutons 'pile' et 'face', ainsi qu'un paragraphe (<p></p>) en dessous. 
+        // Quand on clique sur le bouton 'pile', affichez 'Vous avez choisi : pile' dans le paragraphe. 
+        // Quand on clique sur le bouton 'face', affichez 'Vous avez choisi : face'.
+        
+        const btnpi = document.getElementById('btnpile')
+        const btnfa = document.getElementById('btnface')
+        const result = document.getElementById('result')
+        btnpi.addEventListener('click',() => {
+            result.textContent = ('vous avez tapé pile')
+        })
+        btnfa.addEventListener('click',() => {
+            result.textContent = ("vous avez tapé face")
+        })
+        
+    </script>
+    
+</body>
+</html>

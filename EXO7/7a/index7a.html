@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>  Exercice 7a</h1>
+  <a href="/EXO7/7b/index7b.html">7b</a>
+  <input type="text" placeholder="Entre un nom" id="champ">
+    <p id="text"></p>
+
+    <script>
+         //Créez un champ de texte (<input>) et un paragraphe vide en dessous. 
+         //À chaque fois qu'une touche est pressée dans le champ, 
+         // affichez la lettre tapée dans le paragraphe (tips : utilisez onkeypress et event.key).
+const champ = document.getElementById('champ')
+const text = document.getElementById('text')
+
+    champ.onkeypress = function (event){
+      text.textContent+= event.key
+    }
+        
+
+    </script>
+    
+</body>
+</html>

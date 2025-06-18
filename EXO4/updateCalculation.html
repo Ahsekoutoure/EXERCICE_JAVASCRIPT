@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculatrice </title>
+    <link rel="stylesheet" href="calule.css">
+</head>
+<body>
+    <H1> Update Calculatrice</H1>
+
+    <div class="content">
+        <div class="ecran">
+
+        </div>
+        <div class="contnet">
+         <div class="btnN">
+              <button class="btnn" type="button" onclick="updatecalculation=('1');">1</button>
+              <button class="btnn" type="button" onclick="updatecalculation=('2');">2</button>
+              <button class="btnn" type="button" onclick="updatecalculation=('3');">3</button>
+
+              <button class="btnn" type="button" onclick="updatecalculation=('4');">4</button>
+              <button class="btnn" type="button" onclick="updatecalculation=('5');">6</button>
+         </div>    
+         <div class="btnN">
+               <button class="btnn" type="button" onclick="updatecalculation=('6');">6</button>
+              <button class="btnn" type="button" onclick="updatecalculation=('7');">7</button>
+              <button class="btnn" type="button" onclick="updatecalculation=('8');">8</button>
+              <button class="btnn" type="button" onclick="updatecalculation=('9');">9</button>
+              <button class="btnn" type="button" onclick="updatecalculation=('0');">0</button>
+         </div>          
+         <div class="btnS">
+            <button class="btns" type="button" onclick="updatecalculation=('*');">*</button>
+            <button class="btns" type="button" onclick="updatecalculation=('+')">+</button>
+            <button class="btns" type="button" onclick="updatecalculation=('-');">-</button>
+            <BUtton class="btns" type="button" onclick="updatecalculation=('/');">/</BUtton>
+
+         </div>
+         <div class="btnEg">
+            <button class="btn" type="button" onclick="updatecalculation=eval();">=</button>
+            <BUtton class="btn" type="button" onclick="updatecalculation=('.');">.</BUtton>
+             <BUtton class="btn" type="button" onclick="updatecalculation=('');">Del</BUtton>
+         </div>
+         </div>
+          <h2>calculateur Moderne</h2>
+    </div>
+
+    <script>
+        let calculateur = ""
+        function updatecalculation(calcul) {
+            calculateur+=calcul
+            document.GetElementById('Enter').innerHTML = calculateur
+        }
+
+    </script>
+</body>
+</html>

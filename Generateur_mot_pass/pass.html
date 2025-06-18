@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Générateur mot de pass</h1>
+     <label for="longeur"></label>
+    <input type="text" placeholder="saisir le mot de pass" id="gmotp">
+    <button id="onclique">Générer Password</button>
+    <p id="affiche"></p>
+
+    <script>
+      function generateur(taille = 14){
+        let car ="azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN,;:!ù$@~#{[[|`^+*-/]}"
+        let motpass=""
+
+        for(let j = 0; j< taille; j++){
+          const point = Math.floor(Math.random()* car.length)
+          motpass+=car[point]
+        }
+        return motpass
+
+      }
+
+    </script>
+    
+</body>
+</html>

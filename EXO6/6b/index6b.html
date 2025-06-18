@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>  Exercice 6b</h1>
+  <a href="/EXO7/7a/index7a.html">7a</a>
+  <input type="text" class="nom" placeholder="saisir">
+    <button class="soumet">Soumettre</button>
+    <p class="text"></p>
+
+    <script>
+        //.Créez une copie de l'exercice 6a, puis faite en sorte que quand vous appuyez sur la touche 'Entrée' 
+        // dans l'<input>, cela affiche aussi le texte dans le paragraph en dessous.
+        //  (tips : utilisez onkeydown et un .querySelector).
+let input = document.querySelector('.nom')
+const btnsoumet = document.querySelector('.soumet')
+const affich = document.querySelector('.text')
+function afficheNom (){
+const nom = input.value
+    affich.textContent = ('votre nom est :  '+ nom )
+}
+btnsoumet.addEventListener('click',afficheNom)
+input.addEventListener('keydown' , (event) =>{
+    if (event.key === 'Enter'){
+        afficheNom()
+    }
+    
+})
+
+    </script>
+    
+</body>
+</html>

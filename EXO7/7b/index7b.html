@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 7b</h1>
+    <a href="/EXO7/7c/index7c.html">7c</a>
+
+    <input type="text" placeholder="saisir quelque mot" id="champ">
+    <p id="conteur"></p>
+
+    <script>
+        const champ= document.getElementById('champ')
+        const conteur= document.getElementById('conteur')
+        champ.addEventListener('keypress', (event) =>{
+            
+            let compt= champ.value.length
+           
+            conteur.innerHTML= 'nombre de caractères : '+compt
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>  Exercice 7c</h1>
+  <a href="/EXO8/"></a>
+  <input type="text" placeholder="Entre un nom" id="champ">
+    <p id="text"></p>
+
+    <script>
+        
+const champ = document.getElementById('champ')
+const text = document.getElementById('text')
+
+    champ.onkeypress = function (event){
+      if(event.key ==="a" || event.key ==="A"){
+        text.textContent+= 'bravo vous avez gagné!'
+      }
+      else{
+        text.textContent+= 'Mauvaise touche!'
+      }
+        
+    }
+        
+
+    </script>
+    
+</body>
+</html>
