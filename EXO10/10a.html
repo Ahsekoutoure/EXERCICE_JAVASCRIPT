@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 10a</h1>
+    <!--Affichez "Page en cours de chargement..." dans un paragraphe. 
+    Quand la page est complètement chargée, remplacez par "Page chargée avec succès !"
+     (tips : utilisez window.onload).-->
+    
+      <p id="pageEta">Page en cours de chargement...</p> 
+
+     <script> 
+      let pageEta =document.getElementById('pageEta')
+
+        window.onload = () => { 
+        pageEta.textContent = 'Page chargée avec succès !' 
+        }
+     </script>
+</body>
+</html>

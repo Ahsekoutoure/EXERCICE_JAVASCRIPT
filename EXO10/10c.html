@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 10c</h1>
+    <!--10c. Créez un compteur qui commence à 0 et s'incrémente chaque seconde seulement
+    après que la page soit entièrement chargée. Affichez "Temps écoulé : X secondes" 
+    (tips : combinez window.onload et setInterval).-->
+    
+    <p id="compt">Temps écoulé : 0 secondes</p> 
+   
+   <script> 
+  let comtp =document.getElementById('compt')
+
+    window.onload = () => { 
+        let t = 0; 
+    setInterval(() => { 
+        t++; 
+        compt.textContent = 'Temps écoulé : ' + secondes + ' secondes'
+        }, ) 
+        } 
+        </script> 
+</body>
+</html>

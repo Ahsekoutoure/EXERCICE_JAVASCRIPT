@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> exercice 9a</h1>
+
+   <!--9a. Créez un formulaire avec un champ email et un bouton submit.
+    Quand le formulaire est soumis, affichez "Email soumis : [email]" 
+    au lieu d'envoyer le formulaire (astuce : utilisez onsubmit et event.preventDefault()). -->
+
+<form id="emailForm"> 
+    <input type="email" id="email" placeholder="Entrez votre email" required> 
+    <button type="submit">Soumettre</button> 
+</form> <p id="resultat"></p> 
+
+<script> 
+const form = document.getElementById('emailForm'); 
+const emailInput = document.getElementById('email'); 
+const resultat = document.getElementById('resultat'); 
+
+form.onsubmit = function(event) { 
+    event.preventDefault(); 
+resultat.textContent = 'Email soumis : ' + emailInput.value; }; 
+
+</script> 
+    </script>
+</body>
+</html>

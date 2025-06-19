@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 10b</h1>
+    <!--10b. Créez une image (<img>) avec une source. 
+    Affichez "Image en cours de chargement..." puis "Image chargée !" 
+    quand l'image est prête (tips : utilisez onload sur l'élément image).-->
+    
+     <p id="etatImag"> Image en cours de changement...</p> 
+    <img id="img" src="/EXO10/beyti.png" alt="Exemple" width="600">
+    <!--
+    <video width="640" height="360" controls autoplay muted loop poster="image.jpg" id="vido">
+    <source src="/EXO10/font vid.mp4" type="video/mp4" >
+     </video>
+     -->
+    
+
+    <script> 
+     const img = document.getElementById('img'); 
+     const etatImg = document.getElementById('etatImag'); 
+     
+     img.onload = () => { 
+       etatImg.innerHTML = 'Image chargée !'
+        }
+    </script> 
+</body>
+</html>

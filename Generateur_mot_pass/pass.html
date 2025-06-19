@@ -8,24 +8,37 @@
 <body>
     <h1>Générateur mot de pass</h1>
      <label for="longeur"></label>
-    <input type="text" placeholder="saisir le mot de pass" id="gmotp">
+    <input type="text" placeholder="saisir le mot de pass" id="motp">
     <button id="onclique">Générer Password</button>
     <p id="affiche"></p>
 
     <script>
-      function generateur(taille = 14){
-        let car ="azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN,;:!ù$@~#{[[|`^+*-/]}"
+      const affiche= document.getElementById("affiche")
+      const Btncliq= document.getElementById("onclique")
+      let motp= document.getElementById('motp')
+
+      motp.addEventListener('input',()=>{
+        motp= motp.value 
+      
+      Btncliq.addEventListener('click',()=>{
+      
+      function generateur(taille= 12){
+        let caract ="azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN,;:!ù$@~#{[[|`^+*-/]}"
         let motpass=""
 
         for(let j = 0; j< taille; j++){
-          const point = Math.floor(Math.random()* car.length)
-          motpass+=car[point]
+          const point = Math.floor(Math.random()* caract.length)
+          motpass+=caract[point]
         }
         return motpass
 
       }
+      const geneAuto= generateur(taille= 12)
+      affiche.innerHTML= 'votre mot de pas est: '+geneAuto
 
+    })
+    })
     </script>
     
-</body>
+  </body>
 </html>

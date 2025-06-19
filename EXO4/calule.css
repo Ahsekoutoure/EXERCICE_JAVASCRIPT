@@ -1,6 +1,7 @@
 body{
-    justify-content: center;
+    text-align: center;
     flex-wrap: wrap;
+    display: flex;
 }
 .content{
     background: greenyellow;
@@ -20,6 +21,7 @@ body{
     flex-direction: column;
     gap: 20px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 .btnN{
     display:flex;
@@ -63,4 +65,9 @@ body{
 button h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
+    text-align: center;
+}
+.ecran p { font-family: 'Times New Roman', Times, serif; font-size: 30px;font-weight: bolder;color: blue;display: flex; flex-wrap: wrap;}
+.ecran{
+    display: flex; flex-wrap: wrap; flex-direction: column;
 }

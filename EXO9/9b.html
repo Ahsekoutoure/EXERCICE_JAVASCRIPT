@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercice 9b</h1>
+    <!--Créez un champ de mot de passe. Quand l'utilisateur clique dans le champ, 
+    affichez "Tapez votre mot de passe". Quand il clique ailleurs, affichez "Champ quitté" 
+    (tips : utilisez onfocus et onblur). -->
+
+    <input type="password" id="motdp" placeholder="Mot de passe"> 
+    <p id="message"></p> 
+
+    <script> 
+    const motdp = document.getElementById('motdp') 
+    const message = document.getElementById('message')
+
+    motdp.onfocus = () => { 
+        message.textContent = 'Tapez votre mot de passe' 
+    } 
+        motdp.onblur = () => { message.textContent = 'Champ quitté'; 
+        } 
+        </script>
+    
+</body>
+</html>

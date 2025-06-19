@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Excercice 9c</h1>
+    <!--Créez un select avec 3 options (Rouge, Vert, Bleu). 
+    Quand l'utilisateur change la sélection, changez la couleur de fond de la page selon son choix
+    (tips : utilisez onchange)-->
+    
+    <label for="col">Choisissez une couleur dans la liste :</label> 
+    <select id="col"> 
+        <option value="">--Choisir--</option> 
+        <option value="red">Rouge</option> 
+        <option value="green">Vert</option> 
+        <option value="blue">Bleu</option> 
+    </select> 
+    
+    <script> 
+    const select = document.getElementById('col')
+    select.onchange = () => { 
+        document.body.style.backgroundColor = select.value 
+    } 
+    </script>
+</body>
+</html>
