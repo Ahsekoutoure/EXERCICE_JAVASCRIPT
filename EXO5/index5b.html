@@ -7,15 +7,31 @@
 </head>
 <body>
     <h1>EXO5b</h1>
-    <button >5a</button>
-    <button class="btn">9b</button>
-    
+     <h1 style="text-align: center;">Appuyez sur un boution svp!</h1>
+    <div style="display: flex;justify-content: center; gap: 50px;">
+        <button class="Btn" style="width: 100px; height: 50px; border-radius: 15px;">5a</button>
+        <button class="btn" style="width: 100px; height: 50px;border-radius: 15px;">9b</button>
+    </div>
+            <h3 style="text-align: center;" id="msg"></h3>
     <script>
         //5b.En continuant depuis l'exercice 5a, créez un autre bouton <button>9b</button> en dessous du button 5a.
         //  puis avec le JavaScript, changez le texte du second bouton en '9b done!' (tips : ajoutez une classe et utilisez .querySelector).
     
         const btn9a = document.querySelector(".btn")
-        btn9a.textContent = '9a done!'
+        const btn5a = document.querySelector(".Btn")
+        btn9a.addEventListener('click',()=>{
+            btn9a.textContent = '9a done!'
+            btn9a.style.background="rgb(148, 248, 49)"
+            document.getElementById("msg").innerHTML='Vous avaz changeé le bouton 9b avec succès!'
+            document.getElementById("msg").style.color= "rgb(4, 78, 175)"
+        })
+        btn5a.addEventListener('click',()=>{
+            btn5a.textContent='5a done!'
+            btn5a.style.background='green'
+            document.getElementById("msg").innerHTML='Vous avaz changeé le bouton 5a avec succès!'
+             document.getElementById("msg").style.color= "rgb(4, 100, 540)"
+        })
+        
     
     </script>
     

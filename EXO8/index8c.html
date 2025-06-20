@@ -6,7 +6,7 @@
     <title>Document</title>
   
 </head>
-<body style="text-align: justify;transition: 0.25s;">
+<body style="text-align: justify;transition: 0.25s;" id="bo">
     <h1>Exercice 8c</h1>
     <!-- Changez la couleur de fond de la page progressivement pendant le scroll : blanc au début, 
      rouge quand on arrive en bas (tips : calculez un pourcentage basé sur scrollY et la hauteur totale).-->
@@ -127,22 +127,25 @@
     </p>
 
      <script>
-        let body = document.querySelectorAll('body')
+       
         
 
-        window.addEventListener('scroll', (event)=> {
-           
+        window.addEventListener('scroll', ()=> {
+            let bo = document.querySelector('body')
             let scroll = window.scrollY
             let pourcent = (scroll / window.innerHeight) * 100
 
-            if (Math.round(pourcent)<=200){
-                body.style.background = 'red'
+            if (Math.round(pourcent) <=5){
+                bo.style.background = 'White'
             } 
-            else if (Math.round(pourcent)>=200) {
-                body.style.background = 'green' 
+            else if (Math.round(pourcent)<=20) {
+                bo.style.background = 'yellow' 
+            }
+            else if (Math.round(pourcent)<=40) {
+                bo.style.background = 'green' 
             }
             else {
-                body.style.background = 'red'
+                bo.style.background = 'red'
             }
         })
     </script>

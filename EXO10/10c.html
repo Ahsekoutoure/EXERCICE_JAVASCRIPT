@@ -16,13 +16,16 @@
    <script> 
   let comtp =document.getElementById('compt')
 
-    window.onload = () => { 
-        let t = 0; 
-    setInterval(() => { 
-        t++; 
-        compt.textContent = 'Temps écoulé : ' + secondes + ' secondes'
-        }, ) 
-        } 
-        </script> 
+        let cpt = 0 
+        let temps = setInterval(() => {
+            cpt++
+        },20000)
+
+        window.onload = () => {
+            clearInterval(temps)
+            comtp.innerHTML = `Le compteur s'est arrêté à'+ cpt+'secondes`
+        }
+    </script>
+
 </body>
 </html>

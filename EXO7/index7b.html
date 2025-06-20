@@ -12,17 +12,29 @@
     <!--). 7b. Créez un champ de texte et comptez le nombre de caractères tapés. 
     Affichez "Nombre de caractères : X" dans un paragraphe qui se met à jour à chaque frappe. -->
 
-    <input type="text" placeholder="saisir quelque mot" id="champ">
-    <p id="conteur"></p>
+    <div style="display:flex;flex-direction: column; justify-content: center; background: darkcyan; width: 600px; height: 300px; margin: auto;">
+        <h1 style="margin: 20px;">Compteur du nombre de caractère saisir</h1>
+        <div style="display:flex;justify-content: center; ">
+        <input type="text" placeholder="saisir quelque mot" id="champ" style="border-radius:10px; width: 300px; height: 40px;"></div>
+     <div style="display:flex;justify-content: center;">
+        <p id="conteur" style="font-size: large; color: rgb(236, 74, 74);font-weight: bolder; background-color: aliceblue;"></p></div></div>
 
     <script>
-        const champ= document.getElementById('champ')
+        const champ= document.querySelector('input')
         const conteur= document.getElementById('conteur')
-        champ.addEventListener('keypress', (event) =>{
-            
-            let compt= champ.value.length
-           
-            conteur.innerHTML= 'nombre de caractères : '+compt
+        champ.addEventListener('keypress', () =>{
+            let compt=champ.value.length+1
+           if(compt<= 24){
+                conteur.innerHTML= 'nombre de caractères : '+compt
+                 
+            }
+            else { 
+                while (compt>= 25) {
+                conteur.innerHTML= 'vous avez depassé le nombre de caractère saisir'
+                 champ.value=""
+                 compt=compt-1
+            } 
+            } 
         })
     </script>
 </body>

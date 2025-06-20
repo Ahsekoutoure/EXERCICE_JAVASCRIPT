@@ -14,10 +14,13 @@
       <p id="pageEta">Page en cours de chargement...</p> 
 
      <script> 
-      let pageEta =document.getElementById('pageEta')
+     
 
         window.onload = () => { 
-        pageEta.textContent = 'Page chargée avec succès !' 
+        let pageEta =document.getElementById('pageEta')
+        setTimeout(() => {
+        },30000);
+         pageEta.textContent = 'Page chargée avec succès !' 
         }
      </script>
 </body>

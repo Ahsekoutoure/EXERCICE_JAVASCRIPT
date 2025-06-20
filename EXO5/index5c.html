@@ -7,9 +7,16 @@
 </head>
 <body>
     <h1>EXO5c</h1>
-    <button ID="btnpile">pile</button>
-    <button ID="btnface">face</button>
-    <p ID="result"></p>
+
+    <div style="display:flex;flex-direction: column; justify-content: center; background: rgb(27, 44, 44); width: ; height: 300px; margin: auto;">
+            <h1 style="margin: 20px;text-align: center; color: aliceblue;"> Tapez sur un bouton Pile/Face</h1>
+        <div style="display:flex;justify-content: center; ">
+           <button id="btnpile" style="background: rgb(238, 120, 232);width: 200px; height: 40px; border-radius: 10px;margin: 10px;">Taper Pile</button></div>
+        <div style="display:flex;justify-content: center;">
+            <button id="btnface" style="background: rgb(148, 248, 49);width: 200px; height: 40px; border-radius: 10px;margin: 10px;">Taper Face</button></div>
+     <div style="display:flex;justify-content: center;">
+        <p ID="result" style="font-size: 50px; ;font-weight: bolder;color: azure;"></p>
+    </div></div>
 
     <script>
         //5c. Créez 2 boutons 'pile' et 'face', ainsi qu'un paragraphe (<p></p>) en dessous. 
@@ -20,10 +27,10 @@
         const btnfa = document.getElementById('btnface')
         const result = document.getElementById('result')
         btnpi.addEventListener('click',() => {
-            result.textContent = ('vous avez tapé pile')
+            result.textContent = ('Vous avez choisi : pile')
         })
         btnfa.addEventListener('click',() => {
-            result.textContent = ("vous avez tapé face")
+            result.textContent = ("Vous avez choisi : face")
         })
         
     </script>

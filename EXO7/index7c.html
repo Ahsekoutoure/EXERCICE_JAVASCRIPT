@@ -13,8 +13,14 @@
   Quand l'utilisateur appuie sur 'a' n'importe où sur la page, affichez "Bravo ! Vous avez gagné !" 
   (tips : utilisez document.onkeypress).-->
   
-  <input type="text" placeholder="Entre un nom" id="champ">
-    <p id="text"></p>
+  <div style="display:flex;flex-direction: column; justify-content: center; background: darkcyan; width: 600px; height: 300px; margin: auto;">
+        <h1 style="margin: 20px;text-align: center;">Appuyez sur la touche 'a</h1>
+        <div style="display:flex;justify-content: center; ">
+        <input type="text" placeholder="Taper sur une touche!" id="champ" style="border-radius:10px; width: 300px; height: 40px;"></div>
+     <div style="display:flex;justify-content: center;">
+        <p id="text" style="font-size: 50px; ;font-weight: bolder; background-color: aliceblue;"></p></div></div>
+
+  
 
     <script>
         
@@ -23,10 +29,12 @@ const text = document.getElementById('text')
 
     champ.onkeypress = function (event){
       if(event.key ==="a" || event.key ==="A"){
-        text.textContent+= 'bravo vous avez gagné!'
+        text.textContent= 'bravo vous avez gagné!'
+        text.style.color="rgb(100, 235, 10)"
       }
       else{
-        text.textContent+= 'Mauvaise touche!'
+        text.textContent= 'Mauvaise touche!'
+        text.style.color="red"
       }   
     }
         

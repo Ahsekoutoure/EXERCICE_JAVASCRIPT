@@ -11,17 +11,25 @@
     affichez "Tapez votre mot de passe". Quand il clique ailleurs, affichez "Champ quitté" 
     (tips : utilisez onfocus et onblur). -->
 
-    <input type="password" id="motdp" placeholder="Mot de passe"> 
-    <p id="message"></p> 
+    <div style="display:flex;flex-direction: column; justify-content: center; background: darkcyan; width: 600px; height: 300px; margin: auto;">
+        <h1 style="margin: 20px;text-align: center;">Cliquez dans le champ</h1>
+        <div style="display:flex;justify-content: center; ">
+        <input type="password" placeholder="Taper votre mot de pass" id="motdp" style="border-radius:10px; width: 300px; height: 40px;"></div>
+     <div style="display:flex;justify-content: center;">
+        <p id="message" style="font-size: 30px; ;font-weight: bolder;"></p></div></div>
+
 
     <script> 
     const motdp = document.getElementById('motdp') 
     const message = document.getElementById('message')
 
     motdp.onfocus = () => { 
-        message.textContent = 'Tapez votre mot de passe' 
+        message.textContent = 'Tapez votre mot de passe'
+        message.style.color= 'white' 
     } 
-        motdp.onblur = () => { message.textContent = 'Champ quitté'; 
+        motdp.onblur = () => {
+             message.textContent = 'Champ quitté';
+             message.style.color='red'
         } 
         </script>
     

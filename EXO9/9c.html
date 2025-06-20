@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="justify-items: center;">
     <h1>Excercice 9c</h1>
     <!--Créez un select avec 3 options (Rouge, Vert, Bleu). 
     Quand l'utilisateur change la sélection, changez la couleur de fond de la page selon son choix
     (tips : utilisez onchange)-->
     
-    <label for="col">Choisissez une couleur dans la liste :</label> 
-    <select id="col"> 
+   
+   <div style="margin: auto;">
+     <label for="col" style="font-size: 30px;">Choisissez une couleur dans la liste :</label> 
+    <select id="col" style="background: rgb(191, 245, 177);width: 100px; font-size: 20px;"> 
         <option value="">--Choisir--</option> 
         <option value="red">Rouge</option> 
         <option value="green">Vert</option> 
         <option value="blue">Bleu</option> 
-    </select> 
+        <option value="yellow">Jaune</option> 
+        <option value="pink">Rose</option> 
+        <option value="orange">Orange</option>
+        <option value="purple">Violet</option> 
+        <option value="brown">Marron</option> 
+        <option value="grey">Gris</option> 
+    </select> </div> 
     
     <script> 
     const select = document.getElementById('col')

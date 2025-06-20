@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background: rgb(4, 1, 22);">
    <h1> exercice 9a</h1>
 
    <!--9a. Créez un formulaire avec un champ email et un bouton submit.
     Quand le formulaire est soumis, affichez "Email soumis : [email]" 
     au lieu d'envoyer le formulaire (astuce : utilisez onsubmit et event.preventDefault()). -->
 
-<form id="emailForm"> 
-    <input type="email" id="email" placeholder="Entrez votre email" required> 
-    <button type="submit">Soumettre</button> 
-</form> <p id="resultat"></p> 
+<form id="emailForm" style="margin: auto; align-items: center;width: 600px;"> <h2 style="color: aliceblue;text-align: center; font-size: 50px;">Entrez un mail pour envoyer</h2>
+    <input type="email" id="email" placeholder="Entrez votre email" style="width: 300px;height: 40px; border-radius: 10px;" required> 
+    <button type="submit" style="width: 100px; height: 40px;background: greenyellow; border-radius: 10px;">Soumettre</button> 
+</form> <p id="resultat" style="text-align: center; font-size: 40px;color: rgb(137, 253, 70);"></p> 
 
 <script> 
 const form = document.getElementById('emailForm'); 
